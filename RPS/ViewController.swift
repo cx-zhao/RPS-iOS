@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateStatus(.start)
-
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -31,6 +30,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var playAgain: UIButton!
     
     func updateStatus(_ gameState: GameState) {
+        view.backgroundColor = UIColor(red: 0.2, green: 0.3, blue: 0.5, alpha: 0.4)
         appSign.text = "⛄️"
         switch gameState {
             case .win:
